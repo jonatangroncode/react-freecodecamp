@@ -13,18 +13,38 @@ import { createRoot } from "react-dom/client";
 
 const root = createRoot(document.getElementById("root"));
 
-function Page() {
+function Header() {
   return (
-    <main>
-      <ul>
-        <li>LKSFB</li>
-        <li>sdugv</li>
-        <li>sdvsdf</li>
-        <li>dsffvsd</li>
-        <li>fdvsfvfvvfsvf</li>
-      </ul>
-    </main>
+    <>
+      <header>
+        <h1>My App</h1>
+      </header>
+    </>
   );
 }
 
-root.render(<Page />);
+function UndordedList() {
+  return (
+    <>
+      <ul>
+        <li>hejhej</li>
+        <li>nummer 2</li>
+        <li>fdvs</li>
+        <li>srfwr</li>
+        <li>erwvrt</li>
+      </ul>
+    </>
+  );
+}
+
+function Footer() {
+  return <h2>copyright --- 2025</h2>;
+}
+
+root.render(
+  <main>
+    <Header />
+    <UndordedList />
+    <Footer />
+  </main>
+);
