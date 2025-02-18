@@ -10,14 +10,22 @@
 // )
 
 import { createRoot } from "react-dom/client";
+import "./index.css";
 
 const root = createRoot(document.getElementById("root"));
 
 function Header() {
   return (
     <>
-      <header>
-        <h1>My App</h1>
+      <header className="header">
+        <img className="logo" src="./src/assets/react.svg" alt="logo" />
+        <nav>
+          <ul className="nav-list">
+            <li className="nav-list-item">Pricing</li>
+            <li className="nav-list-item">About</li>
+            <li className="nav-list-item">Contact</li>
+          </ul>
+        </nav>
       </header>
     </>
   );
@@ -26,13 +34,22 @@ function Header() {
 function UndordedList() {
   return (
     <>
-      <ul>
-        <li>hejhej</li>
-        <li>nummer 2</li>
+      <ol>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae omnis
+          enim hic itaque corrupti, sed cum iste rem et optio a dolore nobis,
+          dicta explicabo deleniti provident architecto culpa accusamus.
+        </li>
+        <li>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni nemo
+          dolorum sunt, ullam necessitatibus nam quisquam obcaecati provident
+          libero nobis voluptates? Facilis eum in consectetur expedita maxime
+          velit cupiditate tempora?
+        </li>
         <li>fdvs</li>
         <li>srfwr</li>
         <li>erwvrt</li>
-      </ul>
+      </ol>
     </>
   );
 }
