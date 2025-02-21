@@ -1,0 +1,19 @@
+article.journal-entry {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+article.journal-entry .marker {
+  width: 7px;
+  margin-right: 4px;
+}
+
+.main-img {
+  width: 125px;
+  height: 168px;
+
+  overflow: hidden;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
