@@ -2,6 +2,7 @@ article.journal-entry {
   display: flex;
   gap: 10px;
   padding: 10px;
+  gap: 20px;
 }
 
 article.journal-entry .marker {

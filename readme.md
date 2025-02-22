@@ -23,7 +23,7 @@ This collection includes the following projects:
 - **React-freecodecamp** - display some basic text image and styling with bootstrap 
 ![Preview of the project](previewimages/react-freecodecamp.png)
 - **travel-journal** - A journal with location and information about visited locations (created using reusable components and props)
-![Preview of the project](previewimages/react-freecodecamp.png)
+![Preview of the project](previewimages/travel-journal.png)
 
 
 
