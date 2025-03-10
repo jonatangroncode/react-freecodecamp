@@ -3,7 +3,11 @@ import "./InfoTicket.css";
 const InfoTicket = (props) => {
   return (
     <article className="journal-entry">
-      <img className="main-img" src={props.mainimg} alt="image" />
+      <img
+        className="main-img"
+        src={props.mainimg.src}
+        alt={props.mainimg.alt}
+      />
       <div>
         <img src="../../src/assets/pin.svg" alt="pin" />
         <span> {props.country} </span>
