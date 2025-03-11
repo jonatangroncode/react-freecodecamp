@@ -1,10 +1,22 @@
 import "./App.css";
 import "./components/jokes/Jokes";
 import Jokes from "./components/jokes/Jokes";
+import "./data/jokesData";
+import jokesData from "./data/jokesData";
 
 function App() {
+  const jokeElements = jokesData.map((joke) => {
+    return <Jokes setup={joke.setup} punchline={joke.punchline} />;
+  });
   return (
     <>
+      <h1>Display jokes with map</h1>
+      {jokeElements}
+
+      <hr />
+      <hr />
+
+      <h1>Displaye jokes by calling component</h1>
       <Jokes setup="What do you call a pony with a cough? A little horse. " />
       <Jokes
         setup="What did one hat say to the other? "

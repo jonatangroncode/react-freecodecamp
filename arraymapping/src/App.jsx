@@ -1,4 +1,6 @@
 import "./App.css";
+import "./data/jokesData";
+import jokesData from "./data/jokesData";
 
 function App() {
   let numbers = [1, 2, 3, 4, 5];
@@ -10,6 +12,8 @@ function App() {
     (name) => name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()
   );
   console.log(capitalizedNames);
+
+  console.log(jokesData);
 
   return (
     <>
