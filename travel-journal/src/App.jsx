@@ -2,11 +2,28 @@ import "./App.css";
 import Entry from "./components/entry/Entry.jsx";
 import Header from "./components/header/Header.jsx";
 import InfoTicket from "./components/infoticket/InfoTicket.jsx";
+import data from "./data/data.js";
 
 function App() {
+  const EntryComponents = data.map((entry, index) => {
+    return (
+      <InfoTicket
+        key={index} // React behöver en unik key för varje komponent i en lista
+        mainimg={entry.img}
+        country={entry.country}
+        googlelink={entry.googleMapsLink}
+        traveldate={entry.dates}
+        place={entry.title}
+        description={entry.text}
+      />
+    );
+  });
+
   return (
     <>
       <Header />
+
+      {EntryComponents}
 
       <InfoTicket
         mainimg={{ src: "../src/assets/japan.png", alt: "japan image" }}
