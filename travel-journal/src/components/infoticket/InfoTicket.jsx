@@ -1,6 +1,7 @@
 import "./InfoTicket.css";
 
 const InfoTicket = (props) => {
+  console.log(props);
   return (
     <article className="journal-entry">
       <img

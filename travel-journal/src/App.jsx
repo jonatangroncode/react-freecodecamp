@@ -20,7 +20,7 @@ function App() {
       />
 
       <InfoTicket
-        mainimg={{ src: "../src/assets/austalien.png", alt: "Sidney image" }}
+        mainimg={{ src: "../src/assets/austalien.png", alt: "Sidney image " }}
         country="AUSTRALIA"
         googlelink="https://www.google.com/maps/place/Sydneys+operahus/@-33.8567799,151.2127218,17z/data=!3m1!4b1!4m6!3m5!1s0x6b12ae665e892fdd:0x3133f8d75a1ac251!8m2!3d-33.8567844!4d151.2152967!16zL20vMDZfbm0?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D"
         traveldate="27 May, 2021 - 8 Jun, 2021"
