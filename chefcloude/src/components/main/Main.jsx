@@ -1,15 +1,15 @@
 import "./Main.css";
+import React from "react";
 
 const Main = () => {
-  const ingredients = ["chicken", "banana", "oregano"];
+  const [ingredients, setIngredients] = React.useState([]);
 
   function handleSubmit(event) {
     event.preventDefault();
     console.log("Form submitted");
     const formData = new FormData(event.currentTarget);
     const newIngredient = formData.get("ingredient");
-    ingredients.push(newIngredient);
-    console.log(ingredients);
+    setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
   }
 
   return (
