@@ -4,17 +4,15 @@ import React from "react";
 const Main = () => {
   const [ingredients, setIngredients] = React.useState([]);
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  function handleSubmit(formData) {
     console.log("Form submitted");
-    const formData = new FormData(event.currentTarget);
     const newIngredient = formData.get("ingredient");
     setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
   }
 
   return (
     <main>
-      <form onSubmit={handleSubmit} className="add-ingredient-form  ">
+      <form action={handleSubmit} className="add-ingredient-form  ">
         <input
           aria-label="Add ingredient"
           type="text"
