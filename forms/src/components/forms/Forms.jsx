@@ -5,8 +5,13 @@ const Forms = () => {
     console.log("Form submitted");
     const email = formData.get("email");
     const password = formData.get("password");
+    const employmentStatus = formData.get("employmentstatues");
+    const diataryRestrictions = formData.get("diataryRestrictions");
+
     console.log(`Email: ${email}`);
     console.log(`Password: ${password}`);
+    console.log(`Employment Status: ${employmentStatus}`);
+    console.log(`diataryRestrictions: ${diataryRestrictions}`);
   }
 
   return (
@@ -20,7 +25,6 @@ const Forms = () => {
           name="email"
           placeholder="Joe.doe@hotmail.com"
         />
-        <br />
         <label htmlFor="password">Password: </label>
         <input
           id="password"
@@ -28,7 +32,80 @@ const Forms = () => {
           name="password"
           placeholder="password"
         />
-        <br />
+
+        <label htmlFor="description">Description: </label>
+        <textarea
+          name="description"
+          id="description"
+          defaultValue="This is a description  "
+        ></textarea>
+
+        <fieldset>
+          <legend>Employment status</legend>
+          <label htmlFor="option1" className="radiostyle">
+            <input
+              type="radio"
+              id="option1"
+              name="employmentstatues"
+              value="unemployed"
+            />
+            Unemployed
+          </label>
+
+          <label htmlFor="option2" className="radiostyle">
+            <input
+              type="radio"
+              id="option2"
+              name="employmentstatues"
+              value="part-time"
+            />
+            Part-time
+          </label>
+
+          <label htmlFor="option3" className="radiostyle">
+            <input
+              type="radio"
+              id="option3"
+              name="employmentstatues"
+              value="full-time"
+            />
+            Full-time
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Dietary restrictions:</legend>
+          <label htmlFor="option1" className="radiostyle">
+            <input
+              type="checkbox"
+              id="option4"
+              name="diataryRestrictions"
+              value="kosher "
+            />
+            Kosher
+          </label>
+
+          <label htmlFor="option2" className="radiostyle">
+            <input
+              type="checkbox"
+              id="option5"
+              name="diataryRestrictions"
+              value="vegan"
+            />
+            Vegan
+          </label>
+
+          <label htmlFor="option3" className="radiostyle">
+            <input
+              type="checkbox"
+              id="option6"
+              name="diataryRestrictions"
+              value="gluten"
+            />
+            Gluten
+          </label>
+        </fieldset>
+
         <button>Submit</button>
       </form>
     </section>

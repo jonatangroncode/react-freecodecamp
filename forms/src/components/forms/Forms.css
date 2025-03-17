@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
@@ -9,31 +10,52 @@ body {
   background-color: #2dd4bf;
   display: flex;
   justify-content: center;
-  align-content: center;
-  justify-items: center;
   align-items: center;
 }
 
-input {
-  border-radius: 100px;
-  border: 1px solid black;
-  margin-block: 10px;
-  display: block;
-  height: 2rem;
-  text-indent: 10px;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  width: 100%;
 }
 
-input[type="submit"] {
+input,
+textarea {
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid black;
+  height: 2rem;
   padding: 10px;
+}
+
+textarea {
+  height: 100px;
+  border-radius: 10px;
 }
 
 button {
   border-radius: 100px;
   border: 1px solid black;
-  margin-block: 10px;
-
-  margin-block: 10px;
   display: block;
   height: 2rem;
   width: 100%;
+  cursor: pointer;
+  background-color: white;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #262626;
+  gap: 10px;
+  justify-content: none;
+}
+
+.radiostyle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
