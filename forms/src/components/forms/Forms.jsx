@@ -6,12 +6,14 @@ const Forms = () => {
     const email = formData.get("email");
     const password = formData.get("password");
     const employmentStatus = formData.get("employmentstatues");
-    const diataryRestrictions = formData.get("diataryRestrictions");
+    const diataryRestrictions = formData.getAll("diataryRestrictions");
+    const favColor = formData.get("favColor");
 
     console.log(`Email: ${email}`);
     console.log(`Password: ${password}`);
     console.log(`Employment Status: ${employmentStatus}`);
     console.log(`diataryRestrictions: ${diataryRestrictions}`);
+    console.log(`favColor: ${favColor}`);
   }
 
   return (
@@ -105,6 +107,20 @@ const Forms = () => {
             Gluten
           </label>
         </fieldset>
+
+        <label htmlFor="favColor"></label>
+        <select name="favColor" id="favColor" required>
+          <option value="" disabled>
+            -- Choose a color --
+          </option>
+
+          <option value="red">Red</option>
+          <option value="orange">Orange</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          <option value="grey">Grey</option>
+          <option value="violet">Violet</option>
+        </select>
 
         <button>Submit</button>
       </form>
