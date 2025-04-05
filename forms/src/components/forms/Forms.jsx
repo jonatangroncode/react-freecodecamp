@@ -1,19 +1,31 @@
 import React from "react";
 import "./Forms.css";
 const Forms = () => {
-  function signUp(formData) {
-    console.log("Form submitted");
-    const email = formData.get("email");
-    const password = formData.get("password");
-    const employmentStatus = formData.get("employmentstatues");
-    const diataryRestrictions = formData.getAll("diataryRestrictions");
-    const favColor = formData.get("favColor");
+  // function signUp(formData) {
+  //   console.log("Form submitted");
+  //   const email = formData.get("email");
+  //   const password = formData.get("password");
+  //   const employmentStatus = formData.get("employmentstatues");
+  //   const diataryRestrictions = formData.getAll("diataryRestrictions");
+  //   const favColor = formData.get("favColor");
 
-    console.log(`Email: ${email}`);
-    console.log(`Password: ${password}`);
-    console.log(`Employment Status: ${employmentStatus}`);
-    console.log(`diataryRestrictions: ${diataryRestrictions}`);
-    console.log(`favColor: ${favColor}`);
+  //   console.log(`Email: ${email}`);
+  //   console.log(`Password: ${password}`);
+  //   console.log(`Employment Status: ${employmentStatus}`);
+  //   console.log(`diataryRestrictions: ${diataryRestrictions}`);
+  //   console.log(`favColor: ${favColor}`);
+  // }
+
+  function signUp(formData) {
+    const data = formData.get("formData");
+    const diataryData = formData.getAll("diataryRestrictions");
+    console.log(diataryData);
+
+    const allData = {
+      ...data,
+      diataryData,
+    };
+    console.log(allData);
   }
 
   return (
@@ -108,18 +120,17 @@ const Forms = () => {
           </label>
         </fieldset>
 
-        <label htmlFor="favColor"></label>
-        <select name="favColor" id="favColor" required>
+        <label htmlFor="favColor">what is youre fav color </label>
+        <select name="favColor" id="favColor" defaultValue="" required>
           <option value="" disabled>
             -- Choose a color --
           </option>
-
-          <option value="red">Red</option>
-          <option value="orange">Orange</option>
-          <option value="blue">Blue</option>
-          <option value="green">Green</option>
-          <option value="grey">Grey</option>
-          <option value="violet">Violet</option>
+          <option value="Red">Red</option>
+          <option value="Orange">Orange</option>
+          <option value="Blue">Blue</option>
+          <option value="Green">Green</option>
+          <option value="Grey">Grey</option>
+          <option value="Violet">Violet</option>
         </select>
 
         <button>Submit</button>
