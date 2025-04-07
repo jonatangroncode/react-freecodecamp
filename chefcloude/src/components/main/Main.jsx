@@ -21,11 +21,23 @@ const Main = () => {
         />
         <button>Add ingredient</button>
       </form>
-      <ul>
-        {ingredients.map((ingredient, index) => (
-          <li key={index}>{ingredient}</li>
-        ))}
-      </ul>
+      {ingredients.length > 0 && (
+        <section>
+          <h2>Ingredients on hand :</h2>
+          <ul className="ingredients-list" aria-live="polite">
+            {ingredients}
+          </ul>
+          {ingredients.length > 3 && (
+            <div className="get-recipe-container">
+              <div>
+                <h3>Ready for recipe?</h3>
+                <p>Generate a recipe from the list of ingredients.</p>
+              </div>
+              <button className="get-recipe-button">Get recipe</button>
+            </div>
+          )}
+        </section>
+      )}
     </main>
   );
 };
