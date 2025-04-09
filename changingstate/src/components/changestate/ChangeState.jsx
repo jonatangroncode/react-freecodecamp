@@ -1,4 +1,5 @@
 import React from "react";
+import CountComp from "../CountComp/CountComp";
 
 const ChangeState = () => {
   const [counter, setCounter] = React.useState(0);
@@ -17,6 +18,7 @@ const ChangeState = () => {
       <h1>Counter: {counter}</h1>
       <button onClick={add}>+</button>
       <button onClick={subtract}>-</button>
+      <CountComp />
     </div>
   );
 };

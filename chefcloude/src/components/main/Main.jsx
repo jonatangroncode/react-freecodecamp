@@ -4,6 +4,13 @@ import React from "react";
 const Main = () => {
   const [ingredients, setIngredients] = React.useState([]);
 
+  const [recipeShown, setRecipeShown] = React.useState(false);
+
+  console.log(recipeShown);
+  function toggleRecipeShown() {
+    setRecipeShown((prevRecipeShown) => !prevRecipeShown);
+  }
+
   function handleSubmit(formData) {
     console.log("Form submitted");
     const newIngredient = formData.get("ingredient");
@@ -33,7 +40,9 @@ const Main = () => {
                 <h3>Ready for recipe?</h3>
                 <p>Generate a recipe from the list of ingredients.</p>
               </div>
-              <button className="get-recipe-button">Get recipe</button>
+              <button onClick={toggleRecipeShown} className="get-recipe-button">
+                Get recipe
+              </button>
             </div>
           )}
         </section>
