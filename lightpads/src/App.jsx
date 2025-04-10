@@ -4,7 +4,7 @@ import Pads from "./Components/Pads/Pads";
 function App() {
   return (
     <>
-      <Pads />
+      <Pads darkmode={false} />
     </>
   );
 }
